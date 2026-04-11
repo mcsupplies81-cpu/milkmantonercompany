@@ -126,7 +126,7 @@ export function HubPageTemplate({
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { title: "100+ Years Combined Experience", sub: "Deep NorCal roots across our whole team" },
+              { title: "Family Owned & Operated", sub: "NorCal roots, not a franchise" },
               { title: "Local NorCal Team", sub: "Technicians based in your region" },
               { title: "Free Toner Delivery", sub: "Supplies to your door at no charge" },
               { title: "Same-Day Service", sub: "Fast response when you need it" },

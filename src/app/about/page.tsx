@@ -227,7 +227,7 @@ export default function AboutPage() {
       <section className="bg-steel-pale border-b-2 border-brand-black px-5 py-10 md:px-8">
         <div className="max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { stat: "100+", label: "Years combined experience" },
+            { stat: "Family", label: "Owned & operated" },
             { stat: "5", label: "Regions served" },
             { stat: "1,000s", label: "Businesses served" },
             { stat: "Same day", label: "Service response" },

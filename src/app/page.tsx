@@ -57,7 +57,7 @@ export default function HomePage() {
           "HP Authorized Dealer",
           "Konica Minolta Certified",
           "BBB A+ Rated",
-          "100+ Years Combined Experience",
+          "Family Owned & Operated",
         ]}
       />
 
