@@ -309,7 +309,7 @@ export default function HomePage() {
                 src="/images/family-van.jpg"
                 alt="The Milk Man Toner Company family in Loomis, California"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
               />
             </div>
             <div>

@@ -56,7 +56,7 @@ export default function AboutPage() {
           src="/images/team-wide.jpg"
           alt="The Milk Man Toner Company team in Loomis, California"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black/60 to-transparent flex items-end px-6 pb-6">
@@ -108,7 +108,7 @@ export default function AboutPage() {
           src="/images/buy-local.jpg"
           alt="Buy Local - Milk Man Toner Company serves Northern California"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-brand-black/30" />
       </section>
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 src="/images/family-van.jpg"
                 alt="Shamus McClure and family - Milk Man Toner Company"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
               />
             </div>
             <div>
@@ -225,7 +225,7 @@ export default function AboutPage() {
                 src="/images/team-disneyland.jpg"
                 alt="The Milk Man Toner Company team at Disneyland"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
               />
             </div>
           </div>
