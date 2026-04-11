@@ -19,8 +19,12 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+// GSC_VERIFICATION: Replace the content value below with your actual Google Search Console
+// verification code. Go to search.google.com/search-console → Add Property → HTML tag method.
+// Then uncomment the line in the `other` field below.
 export const metadata: Metadata = {
   metadataBase: new URL("https://milkmancompany.com"),
+  // verification: { google: "REPLACE_WITH_YOUR_GSC_VERIFICATION_CODE" },
   title: {
     default:
       "Milk Man Toner Company | Copier & Printer Solutions in Northern California",

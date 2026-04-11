@@ -5,7 +5,7 @@ const solutions = [
     title: "Office Technology Solutions",
     description:
       "Copiers, printers, and multifunction devices from HP and Konica Minolta  -  matched to your office size and print volume.",
-    href: "/copiers-printers",
+    href: "/office-technology/copiers-printers",
     cta: "Explore equipment",
   },
   {

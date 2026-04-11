@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { CTAStrip } from "@/components/sections/CTAStrip";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { buildBreadcrumbSchema, buildFAQPageSchema } from "@/lib/schema";
+import { buildBreadcrumbSchema, buildFAQPageSchema, buildLocationSchema } from "@/lib/schema";
 import { company } from "@/data/company";
 import { services } from "@/data/services";
 import type { Location, FAQ } from "@/types";
@@ -50,6 +50,13 @@ export function LocationPageTemplate({ location }: { location: Location }) {
             url: `${company.website}/locations/${location.slug}`,
           },
         ])}
+      />
+      <JsonLd
+        data={buildLocationSchema(
+          location.name,
+          location.slug,
+          location.metaDescription
+        )}
       />
       {faqs.length > 0 && <JsonLd data={buildFAQPageSchema(faqs)} />}
 
@@ -180,7 +187,7 @@ export function LocationPageTemplate({ location }: { location: Location }) {
                 and fax in one device. Perfect for offices of all sizes.
               </p>
               <Link
-                href="/copiers-printers"
+                href="/office-technology/copiers-printers"
                 className="text-[11px] text-brand-mid font-medium"
               >
                 View equipment &rarr;
@@ -198,7 +205,7 @@ export function LocationPageTemplate({ location }: { location: Location }) {
                 workgroups. Low cost of ownership with legendary HP quality.
               </p>
               <Link
-                href="/copiers-printers"
+                href="/office-technology/copiers-printers"
                 className="text-[11px] text-brand-mid font-medium"
               >
                 View equipment &rarr;

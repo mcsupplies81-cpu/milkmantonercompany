@@ -10,13 +10,11 @@ import { StepBlock } from "@/components/sections/StepBlock";
 import { BrandBlock } from "@/components/sections/BrandBlock";
 import { CTAStrip } from "@/components/sections/CTAStrip";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
-import { ReviewCard } from "@/components/cards/ReviewCard";
 import { LocationCard } from "@/components/cards/LocationCard";
 import { BlogCard } from "@/components/cards/BlogCard";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { homepageFaqs } from "@/data/faqs";
-import { reviews } from "@/data/reviews";
 import { blogPosts } from "@/data/blog-posts";
 import { company } from "@/data/company";
 
@@ -157,28 +155,35 @@ export default function HomePage() {
             Delivering since day one
           </h4>
           <p className="text-[11px] text-brand-mid leading-[1.55]">
-            Like the milkman of old, reliable, on time, and right to your door.
             Like the milkman of old - reliable, on time, and right to your door.
-            Our team brings over 100 years of combined experience in office technology.
+            Family-owned and operated out of Loomis, CA, serving Northern California businesses every day.
           </p>
         </div>
       </div>
 
-      {/* 8. Reviews */}
+      {/* 8. Trust credentials */}
       <section className="px-5 py-8 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-[9px] tracking-[0.16em] text-steel uppercase mb-1.5">
-            Reviews
+            Why Milk Man
           </div>
           <h2 className="font-heading text-[22px] text-brand-black mb-5">
-            What our customers say
+            Trusted by Northern California businesses
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {reviews.map((review) => (
-              <ReviewCard key={review.id} review={review} />
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            {[
+              { title: "HP Authorized Dealer", sub: "Genuine HP parts & supplies" },
+              { title: "Konica Minolta Certified", sub: "Factory-trained technicians" },
+              { title: "BBB A+ Rated", sub: "Accredited business" },
+              { title: "Family Owned", sub: "Loomis, CA - Placer County" },
+              { title: "Same-Day Service", sub: "Local team, fast response" },
+            ].map((badge) => (
+              <div key={badge.title} className="border-[1.5px] border-brand-black p-4 text-center">
+                <div className="font-heading text-[13px] text-brand-black mb-1">{badge.title}</div>
+                <div className="text-[10px] text-brand-mid leading-[1.4]">{badge.sub}</div>
+              </div>
             ))}
           </div>
-          {/* Reviews stats removed  -  will add back when more Google reviews are collected */}
         </div>
       </section>
 

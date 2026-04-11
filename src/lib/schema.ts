@@ -6,15 +6,38 @@ export function buildLocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: company.name,
-    telephone: company.phone,
+    description:
+      "Northern California's locally owned copier and printer dealer. Serving Sacramento, Bay Area, Silicon Valley, and Reno/Tahoe with HP and Konica Minolta copiers, managed print services, free toner delivery, and same-day repair.",
+    telephone: "+19162539804",
+    url: company.website,
+    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: company.address.street,
       addressLocality: company.address.city,
       addressRegion: company.address.state,
       postalCode: company.address.zip,
+      addressCountry: "US",
     },
-    url: company.website,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 38.8277,
+      longitude: -121.1958,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday"],
+        opens: "10:00",
+        closes: "16:00",
+      },
+    ],
     areaServed: [
       "Sacramento, CA",
       "Roseville, CA",
@@ -29,11 +52,13 @@ export function buildLocalBusinessSchema() {
       "Rancho Cordova, CA",
       "Natomas, CA",
       "San Francisco, CA",
+      "San Jose, CA",
       "Silicon Valley, CA",
       "Reno, NV",
       "Lake Tahoe, CA",
-      "Central California",
+      "Northern California",
     ],
+    sameAs: [],
   };
 }
 
@@ -87,6 +112,46 @@ export function buildProductSchema(machine: Machine) {
         name: company.name,
       },
     },
+  };
+}
+
+export function buildLocationSchema(cityName: string, citySlug: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: `${company.name} - ${cityName}`,
+    description,
+    telephone: "+19162539804",
+    url: `${company.website}/locations/${citySlug}`,
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: "US",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 38.8277,
+      longitude: -121.1958,
+    },
+    areaServed: cityName,
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday"],
+        opens: "10:00",
+        closes: "16:00",
+      },
+    ],
   };
 }
 
