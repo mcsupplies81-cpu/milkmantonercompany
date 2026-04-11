@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Brand colors */
+  --color-brand-black: #1a1a1a;
+  --color-brand-mid: #4a6578;
+  --color-brand-accent: #2c4a5a;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Steel palette */
+  --color-steel: #8fa8bc;
+  --color-steel-light: #b8cdd9;
+  --color-steel-pale: #dde8ee;
+  --color-steel-bg: #eef3f6;
+
+  /* Fonts */
+  --font-heading: var(--font-dm-serif-display), serif;
+  --font-body: var(--font-dm-sans), sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  color: var(--color-brand-black);
+  background: #ffffff;
+}
+
+/* FAQ Accordion */
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
 }

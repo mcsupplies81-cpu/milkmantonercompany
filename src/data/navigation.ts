@@ -1,0 +1,48 @@
+import type { NavItem } from "@/types";
+
+export interface NavSection {
+  label: string;
+  href: string;
+  children?: { label: string; href: string; description?: string }[];
+}
+
+export const mainNav: NavSection[] = [
+  {
+    label: "Office Technology",
+    href: "/office-technology",
+    children: [
+      { label: "Copiers & Printers", href: "/office-technology/copiers-printers", description: "HP & Konica Minolta MFPs" },
+      { label: "Production Print", href: "/office-technology/production-print", description: "High-volume print systems" },
+      { label: "Wide Format Printers", href: "/office-technology/wide-format", description: "Plotters & large-format" },
+      { label: "Print Software", href: "/office-technology/print-software", description: "PaperCut & fleet management" },
+    ],
+  },
+  {
+    label: "Managed Services",
+    href: "/managed-services",
+    children: [
+      { label: "Managed Print", href: "/managed-services/managed-print", description: "Full fleet management" },
+      { label: "Managed IT", href: "/managed-services/managed-it", description: "Outsourced IT & 24/7 support" },
+      { label: "Help Desk", href: "/managed-services/help-desk", description: "Local tech support on call" },
+    ],
+  },
+  {
+    label: "IT Solutions",
+    href: "/it-solutions",
+    children: [
+      { label: "Network Solutions", href: "/it-solutions/network-solutions", description: "Setup, management & monitoring" },
+      { label: "Cybersecurity", href: "/it-solutions/cybersecurity", description: "Protect your business data" },
+      { label: "Cloud Services", href: "/it-solutions/cloud-services", description: "Cloud print & document management" },
+      { label: "Business Continuity", href: "/it-solutions/business-continuity", description: "Backup & disaster recovery" },
+    ],
+  },
+  { label: "Locations", href: "/locations/sacramento" },
+  { label: "About", href: "/about" },
+];
+
+export const utilityNav: NavItem[] = [
+  { label: "Order Supplies", href: "/contact" },
+  { label: "Request Service", href: "/contact" },
+  { label: "Pay Bill", href: "/contact" },
+  { label: "Current Customers", href: "/contact" },
+];
