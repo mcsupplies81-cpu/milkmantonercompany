@@ -14,6 +14,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "how-to-choose-copier-lease-sacramento",
     "hp-vs-konica-minolta-copier-comparison",
     "what-is-managed-print-services",
+    "managed-print-services-sacramento",
+    "toner-delivery-sacramento-free",
+    "copier-lease-vs-buy-sacramento",
+    "hp-printer-repair-sacramento",
+    "best-copier-small-business-roseville",
+    "managed-print-placer-county-guide",
+    "copier-rental-vs-lease",
+    "konica-minolta-dealer-sacramento",
+    "office-print-cost-reduction-tips",
+    "choosing-local-copier-dealer-vs-national",
+  ];
+
+  const serviceCityPages = [
+    "managed-print-sacramento",
+    "managed-print-roseville",
+    "managed-print-placer-county",
+    "toner-delivery-sacramento",
+    "toner-delivery-roseville",
+    "hp-printer-service-sacramento",
+    "copier-leasing-sacramento",
+    "copier-leasing-roseville",
   ];
 
   return [
@@ -59,6 +80,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Company
     { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+
+    // Service + city SEO pages (high priority - buyer intent)
+    ...serviceCityPages.map((slug) => ({
+      url: `${BASE_URL}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    })),
 
     // Blog
     { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
