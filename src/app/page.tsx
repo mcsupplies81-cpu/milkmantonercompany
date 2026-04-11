@@ -26,13 +26,17 @@ export default function HomePage() {
       <JsonLd data={buildFAQPageSchema(homepageFaqs)} />
 
       {/* 3. Hero */}
+      {/* Rotating tagline */}
+      <RotatingTagline />
+
+      {/* 3. Hero */}
       <HeroSection
         tag="Northern California's Copier Dealer"
         title={
           <>
-            Office technology
+            Your local partner
             <br />
-            delivered like <em className="text-brand-mid italic">clockwork</em>
+            for <em className="text-brand-mid italic">office technology</em>
           </>
         }
         description="HP and Konica Minolta copiers, printers, toner and managed print  -  serving Sacramento, Bay Area, Silicon Valley, and Reno."
@@ -47,16 +51,13 @@ export default function HomePage() {
         backgroundImage="/images/sf-sutro-night.jpg"
       />
 
-      {/* Rotating tagline  -  like Les Olson */}
-      <RotatingTagline />
-
       {/* 4. Trust badges bar */}
       <TrustBadgeBar
         badges={[
           "HP Authorized Dealer",
           "Konica Minolta Certified",
           "BBB A+ Rated",
-          "25+ Years Serving NorCal",
+          "100+ Years Combined Experience",
         ]}
       />
 
@@ -157,8 +158,8 @@ export default function HomePage() {
           </h4>
           <p className="text-[11px] text-brand-mid leading-[1.55]">
             Like the milkman of old, reliable, on time, and right to your door.
-            We&apos;ve been delivering toner and office technology to NorCal
-            businesses for over 25 years.
+            Like the milkman of old - reliable, on time, and right to your door.
+            Our team brings over 100 years of combined experience in office technology.
           </p>
         </div>
       </div>
@@ -194,7 +195,7 @@ export default function HomePage() {
             Our certified NorCal technicians deliver, install, and service your
             equipment  -  right at your office door. No call centers, no waiting.
           </p>
-          <div className="relative h-[190px] border-[1.5px] border-brand-black overflow-hidden">
+          <div className="relative h-[240px] md:h-[380px] border-[1.5px] border-brand-black overflow-hidden">
             <Image
               src="/images/team-fleet.jpg"
               alt="Milk Man Toner Company delivery fleet covering Northern California"
@@ -304,7 +305,7 @@ export default function HomePage() {
             Northern California, through and through
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-            <div className="relative h-[170px] border-[1.5px] border-brand-black overflow-hidden">
+            <div className="relative h-[220px] md:h-[320px] border-[1.5px] border-brand-black overflow-hidden">
               <Image
                 src="/images/family-van.jpg"
                 alt="The Milk Man Toner Company family in Loomis, California"
@@ -318,7 +319,7 @@ export default function HomePage() {
               </h3>
               <p className="text-[11px] text-[#666] leading-[1.65] mb-2.5">
                 Milk Man Toner Company has been delivering office technology
-                across Northern California for over 25 years. We stand behind
+                across Northern California with over 100 years of combined team experience. We stand behind
                 every machine we sell, every toner cartridge we deliver, and
                 every service call we make.
               </p>

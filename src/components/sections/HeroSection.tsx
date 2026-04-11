@@ -24,7 +24,7 @@ export function HeroSection({
   return (
     <div className="relative bg-steel-pale border-b-2 border-brand-black overflow-hidden">
       {/* Image area */}
-      <div className="w-full h-[260px] md:h-[360px] bg-steel relative overflow-hidden">
+      <div className="w-full h-[300px] md:h-[540px] bg-steel relative overflow-hidden">
         {backgroundImage ? (
           <div
             className="w-full h-full bg-cover bg-center"
