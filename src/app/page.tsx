@@ -294,22 +294,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 11. Video placeholder */}
-      <section className="px-5 py-8 md:px-8">
-        <div className="max-w-6xl mx-auto flex flex-col items-center">
-          <div className="w-full max-w-2xl bg-steel-bg border-[1.5px] border-brand-black h-[220px] md:h-[320px] flex flex-col items-center justify-center">
-            <div className="w-16 h-16 border-2 border-brand-black rounded-full flex items-center justify-center mb-3 cursor-pointer hover:bg-brand-black group transition-colors">
-              <span className="text-2xl text-brand-black group-hover:text-white ml-1">
-                &#9654;
-              </span>
-            </div>
-            <p className="text-[11px] text-brand-mid tracking-[0.04em]">
-              Watch our story · 60 sec
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* 12. About */}
       <section className="bg-steel-bg px-5 py-8 md:px-8">
         <div className="max-w-6xl mx-auto">
