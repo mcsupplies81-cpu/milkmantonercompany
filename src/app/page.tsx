@@ -46,10 +46,7 @@ export default function HomePage() {
           "BBB accredited",
           "NorCal owned & operated",
         ]}
-        backgroundImages={[
-          { src: "/images/sac-capitol-aerial.jpg", alt: "Sacramento Capitol dome at golden hour - Milk Man Toner Company serves the Sacramento region" },
-          { src: "/images/sf-sutro-night.jpg", alt: "San Francisco skyline at night - Milk Man Toner Company serves the Bay Area" },
-        ]}
+        backgroundImage="/images/sac-capitol-aerial.jpg"
       />
 
       {/* 4. Trust badges bar */}
