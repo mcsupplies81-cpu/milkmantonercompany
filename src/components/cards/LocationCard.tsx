@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface LocationCardProps {
   name: string;
@@ -12,9 +13,13 @@ export function LocationCard({ name, subtitle, image, href }: LocationCardProps)
     <Link href={href} className="group relative h-[130px] md:h-[180px] overflow-hidden block">
       {/* Background */}
       <div className="absolute inset-0 bg-steel">
-        <div
-          className="w-full h-full bg-cover bg-center grayscale-[30%] group-hover:grayscale-0 transition-all duration-300"
-          style={{ backgroundImage: `url(${image})` }}
+        <Image
+          src={image}
+          alt={name}
+          fill
+          className="object-cover object-center grayscale-[30%] group-hover:grayscale-0 transition-all duration-300"
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 300px"
+          quality={85}
         />
       </div>
       {/* Overlay */}

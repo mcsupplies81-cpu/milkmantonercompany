@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { CTAStrip } from "@/components/sections/CTAStrip";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -80,10 +81,15 @@ export function LocationPageTemplate({ location }: { location: Location }) {
 
       {/* Hero */}
       <section className="relative border-b-2 border-brand-black overflow-hidden">
-        <div className="h-[200px] md:h-[280px] bg-steel relative">
-          <div
-            className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: `url(${location.image})` }}
+        <div className="h-[200px] md:h-[340px] bg-steel relative overflow-hidden">
+          <Image
+            src={location.image}
+            alt={location.alt}
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+            quality={90}
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-black/75" />
         </div>

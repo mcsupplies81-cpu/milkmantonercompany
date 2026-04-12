@@ -148,6 +148,7 @@ export default function HomePage() {
             alt="Old-school milkman"
             fill
             className="object-cover"
+            sizes="80px"
           />
         </div>
         <div>
@@ -206,6 +207,8 @@ export default function HomePage() {
               alt="Milk Man Toner Company delivery fleet covering Northern California"
               fill
               className="object-cover object-center"
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              quality={90}
             />
           </div>
         </div>
@@ -316,6 +319,8 @@ export default function HomePage() {
                 alt="The Milk Man Toner Company family in Loomis, California"
                 fill
                 className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={90}
               />
             </div>
             <div>

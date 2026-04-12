@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface HeroSectionProps {
   tag?: string;
@@ -26,9 +27,14 @@ export function HeroSection({
       {/* Image area */}
       <div className="w-full h-[300px] md:h-[540px] bg-steel relative overflow-hidden">
         {backgroundImage ? (
-          <div
-            className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
+          <Image
+            src={backgroundImage}
+            alt="Hero background"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+            quality={90}
+            priority
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center">

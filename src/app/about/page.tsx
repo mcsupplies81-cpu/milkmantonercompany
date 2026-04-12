@@ -59,6 +59,7 @@ export default function AboutPage() {
           className="object-cover object-center"
           priority
           sizes="100vw"
+          quality={90}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black/60 to-transparent flex items-end px-6 pb-6">
           <p className="text-white text-[11px] tracking-[0.1em] uppercase font-medium">
@@ -99,6 +100,7 @@ export default function AboutPage() {
           fill
           className="object-cover object-center"
           sizes="100vw"
+          quality={90}
         />
         <div className="absolute inset-0 bg-brand-black/20" />
       </div>
@@ -117,6 +119,7 @@ export default function AboutPage() {
               fill
               className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 768px"
+              quality={90}
             />
           </div>
           <p className="text-[13px] text-[#555] leading-[1.85] mb-4">
@@ -145,6 +148,7 @@ export default function AboutPage() {
           fill
           className="object-cover object-center"
           sizes="100vw"
+          quality={90}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black/60 to-transparent flex items-end px-6 pb-6">
           <p className="text-white text-[11px] tracking-[0.1em] uppercase font-medium">
@@ -198,6 +202,7 @@ export default function AboutPage() {
           fill
           className="object-cover object-center"
           sizes="100vw"
+          quality={90}
         />
         <div className="absolute inset-0 bg-brand-black/30" />
       </div>
