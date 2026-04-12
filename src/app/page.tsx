@@ -46,7 +46,10 @@ export default function HomePage() {
           "BBB accredited",
           "NorCal owned & operated",
         ]}
-        backgroundImage="/images/sf-sutro-night.jpg"
+        backgroundImages={[
+          { src: "/images/sac-capitol-aerial.jpg", alt: "Sacramento Capitol dome at golden hour - Milk Man Toner Company serves the Sacramento region" },
+          { src: "/images/sf-sutro-night.jpg", alt: "San Francisco skyline at night - Milk Man Toner Company serves the Bay Area" },
+        ]}
       />
 
       {/* 4. Trust badges bar */}
@@ -252,7 +255,7 @@ export default function HomePage() {
             <LocationCard
               name="Silicon Valley"
               subtitle="Tech corridor"
-              image="/images/silicon-valley.jpg"
+              image="/images/sf-marin-hills.jpg"
               href="/locations/silicon-valley"
             />
           </div>

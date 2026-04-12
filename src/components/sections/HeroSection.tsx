@@ -1,5 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { HeroImageRotator } from "@/components/sections/HeroImageRotator";
+
+interface HeroSlide {
+  src: string;
+  alt: string;
+}
 
 interface HeroSectionProps {
   tag?: string;
@@ -9,6 +15,7 @@ interface HeroSectionProps {
   secondaryCTA?: { label: string; href: string };
   badges?: string[];
   backgroundImage?: string;
+  backgroundImages?: HeroSlide[];
   backgroundLabel?: string;
 }
 
@@ -20,16 +27,26 @@ export function HeroSection({
   secondaryCTA,
   badges,
   backgroundImage,
+  backgroundImages,
   backgroundLabel,
 }: HeroSectionProps) {
+  // Normalise to a slides array
+  const slides: HeroSlide[] = backgroundImages
+    ? backgroundImages
+    : backgroundImage
+    ? [{ src: backgroundImage, alt: "Hero background" }]
+    : [];
+
   return (
     <div className="relative bg-steel-pale border-b-2 border-brand-black overflow-hidden">
       {/* Image area */}
       <div className="w-full h-[300px] md:h-[540px] bg-steel relative overflow-hidden">
-        {backgroundImage ? (
+        {slides.length > 1 ? (
+          <HeroImageRotator slides={slides} />
+        ) : slides.length === 1 ? (
           <Image
-            src={backgroundImage}
-            alt="Hero background"
+            src={slides[0].src}
+            alt={slides[0].alt}
             fill
             className="object-cover object-center"
             sizes="100vw"

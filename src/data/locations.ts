@@ -31,8 +31,8 @@ export const locations: Location[] = [
     region: "Tech corridor",
     description:
       "Silicon Valley businesses move fast  -  and so does Milk Man Toner Company. We serve offices throughout the South Bay and Silicon Valley, from San Jose and Sunnyvale to Palo Alto, Mountain View, Cupertino, and Santa Clara.\n\nTech companies, startups, venture capital firms, and professional services offices throughout Silicon Valley rely on Milk Man for copier leasing, managed print services, free toner delivery, printer repair, and IT support. We understand that downtime costs money, which is why we guarantee same-day service for our Silicon Valley customers.\n\nOur equipment lineup includes the latest Konica Minolta bizhub multifunction copiers and HP LaserJet Enterprise printers  -  the kind of reliable, secure, high-performance machines that tech-forward offices demand. Every machine comes with free installation, free toner delivery, and ongoing support from our certified technicians.\n\nWhether your office is in a downtown San Jose high-rise or a Palo Alto business park, Milk Man Toner Company delivers office technology with the speed and reliability that Silicon Valley expects.\n\nWe're not a startup  -  we've been serving Northern California businesses for over 25 years. But we bring the same energy and responsiveness that the Valley demands to every service call, every delivery, and every relationship.",
-    image: "/images/silicon-valley.jpg",
-    alt: "Silicon Valley tech corridor  -  copier and printer services for tech companies",
+    image: "/images/sf-marin-hills.jpg",
+    alt: "San Francisco skyline from the Marin hills - Milk Man Toner Company serves Silicon Valley and the Bay Area",
     metaTitle: "Copier & Printer Services in Silicon Valley & San Jose",
     metaDescription:
       "Copier leasing, managed print, and toner delivery for Silicon Valley businesses. Same-day service from Milk Man Toner Company. Call (916) 253-9804.",
