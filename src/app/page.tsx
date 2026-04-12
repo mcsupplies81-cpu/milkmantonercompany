@@ -47,6 +47,7 @@ export default function HomePage() {
           "NorCal owned & operated",
         ]}
         backgroundImage="/images/sac-capitol-aerial.jpg"
+        imagePosition="object-bottom"
       />
 
       {/* 4. Trust badges bar */}

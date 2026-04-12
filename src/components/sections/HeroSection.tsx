@@ -17,6 +17,7 @@ interface HeroSectionProps {
   backgroundImage?: string;
   backgroundImages?: HeroSlide[];
   backgroundLabel?: string;
+  imagePosition?: string;
 }
 
 export function HeroSection({
@@ -29,6 +30,7 @@ export function HeroSection({
   backgroundImage,
   backgroundImages,
   backgroundLabel,
+  imagePosition = "object-center",
 }: HeroSectionProps) {
   // Normalise to a slides array
   const slides: HeroSlide[] = backgroundImages
@@ -48,7 +50,7 @@ export function HeroSection({
             src={slides[0].src}
             alt={slides[0].alt}
             fill
-            className="object-cover object-center"
+            className={`object-cover ${imagePosition}`}
             sizes="100vw"
             quality={90}
             priority
