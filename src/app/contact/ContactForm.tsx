@@ -14,6 +14,8 @@ const serviceOptions = [
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   if (submitted) {
     return (
@@ -29,14 +31,47 @@ export function ContactForm() {
     );
   }
 
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      company: (form.elements.namedItem("company") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        const json = await res.json();
+        throw new Error(json.error || "Something went wrong.");
+      }
+
+      setSubmitted(true);
+    } catch (err: unknown) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Failed to send. Please call (916) 253-9804."
+      );
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
-      className="space-y-4"
-    >
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label className="block text-[11px] font-medium text-brand-black mb-1">
@@ -119,11 +154,18 @@ export function ContactForm() {
         />
       </div>
 
+      {error && (
+        <p className="text-[12px] text-red-600 border border-red-200 bg-red-50 px-3 py-2">
+          {error}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="w-full bg-brand-black text-white text-[12px] py-3 font-medium tracking-[0.04em] hover:bg-brand-accent transition-colors"
+        disabled={loading}
+        className="w-full bg-brand-black text-white text-[12px] py-3 font-medium tracking-[0.04em] hover:bg-brand-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Submit request
+        {loading ? "Sending..." : "Submit request"}
       </button>
 
       <p className="text-[10px] text-[#999] text-center">
