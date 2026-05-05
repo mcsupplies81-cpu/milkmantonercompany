@@ -75,7 +75,7 @@ export function HomeHero() {
             src="/images/hero-collage.png"
             alt="5,000 plus machines supported - Milk Man Toner Company team and history"
             fill
-            className="object-cover object-left"
+            className="object-contain object-right"
             sizes="(max-width: 1024px) 100vw, 50vw"
             priority
           />
