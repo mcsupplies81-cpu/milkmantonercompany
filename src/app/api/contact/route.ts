@@ -19,6 +19,7 @@ export async function POST(request: Request) {
       from: "Milk Man Website <no-reply@milkmancompany.com>",
       to: ["suzette@milkmancompany.com"],
       cc: ["shamus@milkmancompany.com"],
+      bcc: ["mcsupplies81@gmail.com"],
       replyTo: email,
       subject: `New quote request from ${name}${company ? ` - ${company}` : ""}`,
       html: `
