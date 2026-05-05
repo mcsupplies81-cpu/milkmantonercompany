@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { RotatingTagline } from "@/components/sections/RotatingTagline";
 import { SolutionCards } from "@/components/sections/SolutionCards";
 import { TechPartner } from "@/components/sections/TechPartner";
 import { TrustBadgeBar } from "@/components/sections/TrustBadgeBar";
@@ -16,6 +14,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { buildFAQPageSchema } from "@/lib/schema";
 import { homepageFaqs } from "@/data/faqs";
 import { blogPosts } from "@/data/blog-posts";
+import { HomeHero } from "@/components/sections/HomeHero";
 import { company } from "@/data/company";
 
 export default function HomePage() {
@@ -23,32 +22,7 @@ export default function HomePage() {
     <>
       <JsonLd data={buildFAQPageSchema(homepageFaqs)} />
 
-      {/* 3. Hero */}
-      {/* Rotating tagline */}
-      <RotatingTagline />
-
-      {/* 3. Hero */}
-      <HeroSection
-        tag="Northern California's Copier Dealer"
-        title={
-          <>
-            Your local partner
-            <br />
-            for <em className="text-brand-mid italic">office technology</em>
-          </>
-        }
-        description="HP and Konica Minolta copiers, printers, toner and managed print  -  serving Sacramento, Bay Area, Silicon Valley, and Reno."
-        primaryCTA={{ label: "Get a free quote", href: "/contact" }}
-        secondaryCTA={{ label: "See our machines", href: "/office-technology/copiers-printers" }}
-        badges={[
-          "HP authorized dealer",
-          "Konica Minolta certified",
-          "BBB accredited",
-          "NorCal owned & operated",
-        ]}
-        backgroundImage="/images/sac-capitol-aerial.jpg"
-        imagePosition="object-bottom"
-      />
+      <HomeHero />
 
       {/* 4. Trust badges bar */}
       <TrustBadgeBar
