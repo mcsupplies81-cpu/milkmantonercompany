@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, DM_Sans } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
-import { UtilityBar } from "@/components/layout/UtilityBar";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildLocalBusinessSchema, buildOrganizationSchema } from "@/lib/schema";
@@ -52,7 +51,6 @@ export default function RootLayout({
       <body className="font-body text-brand-black bg-white antialiased">
         <JsonLd data={buildLocalBusinessSchema()} />
         <JsonLd data={buildOrganizationSchema()} />
-        <UtilityBar />
         <Navbar />
         <main>{children}</main>
         <Footer />
