@@ -63,15 +63,15 @@ export function HomeHero() {
 
           <div className="absolute top-0 right-0 md:right-[-20px] w-[160px] md:w-[200px] p-2 bg-white  rotate-[3deg]">
             <div className="relative aspect-[5/4]">
-              <Image src="/images/vintage-milkman.png" alt="Vintage milkman" fill className="object-cover" sizes="200px" />
+              <Image src="/images/vintage-milkman.jpg" alt="Vintage milkman delivery truck" fill className="object-cover" sizes="200px" />
             </div>
             <div className="w-4 h-4 rounded-full bg-brand-mid  absolute top-[-6px] left-1/2 -translate-x-1/2 z-10" />
           </div>
 
-          <div className="absolute top-[30%] right-[-10px] md:right-[-30px] w-[120px] md:w-[140px] bg-[#dce8f5] p-3  rotate-[-2deg]">
+          <div className="absolute top-[30%] right-[-10px] md:right-[-30px] w-[140px] md:w-[160px] bg-white p-3  rotate-[-2deg]">
             <div className="w-4 h-4 rounded-full bg-brand-mid  absolute top-[-6px] left-1/2 -translate-x-1/2 z-10" />
-            <div className="relative w-20 h-20 mx-auto">
-              <Image src="/images/logo-silhouette.png" alt="Milk Man logo" fill className="object-contain" sizes="80px" />
+            <div className="relative w-24 h-28 mx-auto">
+              <Image src="/images/logo.jpg" alt="Milk Man Toner Company logo" fill className="object-contain" sizes="80px" />
             </div>
             <p className="text-[8px] tracking-widest text-brand-black text-center mt-2">MILK MAN TONER COMPANY</p>
           </div>
@@ -79,7 +79,7 @@ export function HomeHero() {
           <div className="absolute bottom-0 right-[-10px] md:right-[-20px] w-[220px] md:w-[260px] p-2 pb-6 bg-white  rotate-[-3deg]">
             <div className="w-4 h-4 rounded-full bg-brand-mid  absolute top-[-6px] left-1/2 -translate-x-1/2 z-10" />
             <div className="relative aspect-[13/8]">
-              <Image src="/images/team-fleet.jpg" alt="Milk Man team" fill className="object-cover" sizes="260px" />
+              <Image src="/images/fleet.jpg" alt="Milk Man Toner Company team and fleet" fill className="object-cover" sizes="260px" />
             </div>
             <p className="font-heading italic text-[12px] text-brand-mid text-center mt-1">Thank you! - Our Customers</p>
           </div>
