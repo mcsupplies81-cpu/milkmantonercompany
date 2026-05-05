@@ -1,18 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-function StarIcon() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" className="w-5 h-5 text-brand-mid fill-current">
-      <path d="m12 2.4 2.8 5.6 6.2.9-4.5 4.4 1 6.2-5.5-2.9-5.5 2.9 1-6.2L3 8.9l6.2-.9L12 2.4Z" />
-    </svg>
-  );
-}
-
 export function HomeHero() {
   return (
-    <div className="min-h-[580px] bg-white">
-      <div className="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-[55%_45%]">
+    <div className="bg-white border-b-2 border-brand-black">
+      <div className="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-[52%_48%] min-h-[600px]">
+
+        {/* Left column */}
         <div className="py-12 md:py-16 flex flex-col justify-center">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-[10px] font-semibold tracking-[0.14em] text-brand-mid uppercase">Northern California</span>
@@ -28,8 +22,18 @@ export function HomeHero() {
             HP and Konica Minolta copiers, printers, toner delivery, and managed print services - serving Sacramento, the Bay Area, Silicon Valley, and Reno.
           </p>
           <div className="flex gap-3 flex-wrap mb-10">
-            <Link href="/contact" className="bg-brand-mid text-white text-[13px] font-medium px-7 py-3 hover:bg-brand-black transition-colors">Request a Quote</Link>
-            <Link href="/office-technology/copiers-printers" className="border-2 border-brand-black text-brand-black text-[13px] px-7 py-3 hover:bg-brand-black hover:text-white transition-colors">See Our Machines</Link>
+            <Link
+              href="/contact"
+              className="bg-brand-mid text-white text-[13px] font-medium px-7 py-3 hover:bg-brand-black transition-colors"
+            >
+              Request a Quote
+            </Link>
+            <Link
+              href="/office-technology/copiers-printers"
+              className="border-2 border-brand-black text-brand-black text-[13px] px-7 py-3 hover:bg-brand-black hover:text-white transition-colors"
+            >
+              See Our Machines
+            </Link>
           </div>
           <div className="flex items-center gap-4 flex-wrap">
             {[
@@ -49,40 +53,66 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="relative overflow-visible min-h-[500px]">
-          <div className="absolute left-[5%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[480px] md:h-[480px] rounded-full border-[1.5px] border-brand-black bg-white overflow-hidden">
-            <Image src="/images/sac-tower-bridge.jpg" alt="Sacramento skyline" fill className="object-cover opacity-60" sizes="320px" />
-            <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-              <div className="font-heading text-[11px] tracking-[0.2em] text-brand-mid uppercase mb-2">SINCE 2013</div>
-              <div className="flex items-center gap-1 mb-3"><StarIcon /><StarIcon /><StarIcon /></div>
-              <svg aria-hidden="true" viewBox="0 0 24 24" className="w-8 h-8 text-brand-mid mb-2" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M9 3h6l1 6v12H8V9l1-6Z" /><path d="M10 9h4" /></svg>
-              <div className="font-heading text-[100px] md:text-[120px] leading-none text-brand-mid font-bold">5,000+</div>
-              <div className="mt-2 bg-brand-mid text-white text-[12px] font-bold tracking-[0.12em] uppercase px-8 py-2">MACHINES SUPPORTED</div>
+        {/* Right column */}
+        <div className="relative min-h-[560px] overflow-visible">
+
+          {/* 5,000+ stat graphic - centered in column */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="relative w-[420px] h-[420px] md:w-[500px] md:h-[500px]">
+              <Image
+                src="/images/stat-5000.png"
+                alt="5,000+ machines supported since 2013"
+                fill
+                className="object-contain"
+                sizes="500px"
+                priority
+              />
             </div>
           </div>
 
-          <div className="absolute top-0 right-0 md:right-[-20px] w-[160px] md:w-[200px] p-2 bg-white  rotate-[3deg]">
-            <div className="relative aspect-[5/4]">
-              <Image src="/images/vintage-milkman.jpg" alt="Vintage milkman delivery truck" fill className="object-cover" sizes="200px" />
+          {/* Vintage milkman - top right */}
+          <div className="absolute top-2 right-0 md:right-[-16px] w-[160px] md:w-[200px] p-2 bg-[#f5f0e8] rotate-[3deg] z-20">
+            <div className="w-4 h-4 rounded-full bg-brand-mid absolute top-[-7px] left-1/2 -translate-x-1/2 z-10" />
+            <div className="relative aspect-[4/3]">
+              <Image
+                src="/images/vintage-milkman.jpg"
+                alt="Vintage milkman delivery truck"
+                fill
+                className="object-cover grayscale"
+                sizes="200px"
+              />
             </div>
-            <div className="w-4 h-4 rounded-full bg-brand-mid  absolute top-[-6px] left-1/2 -translate-x-1/2 z-10" />
           </div>
 
-          <div className="absolute top-[30%] right-[-10px] md:right-[-30px] w-[140px] md:w-[160px] bg-white p-3  rotate-[-2deg]">
-            <div className="w-4 h-4 rounded-full bg-brand-mid  absolute top-[-6px] left-1/2 -translate-x-1/2 z-10" />
-            <div className="relative w-24 h-28 mx-auto">
-              <Image src="/images/logo.jpg" alt="Milk Man Toner Company logo" fill className="object-contain" sizes="80px" />
+          {/* Logo card - right middle */}
+          <div className="absolute top-[38%] right-0 md:right-[-16px] w-[130px] md:w-[150px] bg-white border border-steel-pale p-3 rotate-[-2deg] z-20">
+            <div className="w-4 h-4 rounded-full bg-brand-mid absolute top-[-7px] left-1/2 -translate-x-1/2 z-10" />
+            <div className="relative h-28 w-full">
+              <Image
+                src="/images/logo.jpg"
+                alt="Milk Man Toner Company logo"
+                fill
+                className="object-contain"
+                sizes="150px"
+              />
             </div>
-            <p className="text-[8px] tracking-widest text-brand-black text-center mt-2">MILK MAN TONER COMPANY</p>
           </div>
 
-          <div className="absolute bottom-0 right-[-10px] md:right-[-20px] w-[220px] md:w-[260px] p-2 pb-6 bg-white  rotate-[-3deg]">
-            <div className="w-4 h-4 rounded-full bg-brand-mid  absolute top-[-6px] left-1/2 -translate-x-1/2 z-10" />
-            <div className="relative aspect-[13/8]">
-              <Image src="/images/fleet.jpg" alt="Milk Man Toner Company team and fleet" fill className="object-cover" sizes="260px" />
+          {/* Fleet photo - bottom right */}
+          <div className="absolute bottom-4 right-0 md:right-[-16px] w-[230px] md:w-[270px] p-2 pb-7 bg-[#f5f0e8] rotate-[-3deg] z-20">
+            <div className="w-4 h-4 rounded-full bg-brand-mid absolute top-[-7px] left-1/2 -translate-x-1/2 z-10" />
+            <div className="relative aspect-[3/2]">
+              <Image
+                src="/images/fleet.jpg"
+                alt="Milk Man Toner Company team and fleet"
+                fill
+                className="object-cover"
+                sizes="270px"
+              />
             </div>
             <p className="font-heading italic text-[12px] text-brand-mid text-center mt-1">Thank you! - Our Customers</p>
           </div>
+
         </div>
       </div>
     </div>
