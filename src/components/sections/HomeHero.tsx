@@ -4,10 +4,10 @@ import Link from "next/link";
 export function HomeHero() {
   return (
     <section className="bg-[#f0f1f3] border-b-2 border-brand-black">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[640px]">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[680px]">
 
         {/* ── Left column ─────────────────────────────────────── */}
-        <div className="flex flex-col justify-center px-8 md:px-12 lg:px-16 py-16">
+        <div className="flex flex-col justify-center px-8 md:px-10 lg:px-12 py-16">
 
           <div className="flex items-center gap-2 mb-4">
             <span className="text-[10px] font-semibold tracking-[0.16em] text-brand-mid uppercase">
@@ -22,10 +22,10 @@ export function HomeHero() {
           <div className="w-12 h-[2px] bg-brand-mid mb-7" />
 
           <h1 className="mb-6">
-            <span className="block font-heading text-[40px] md:text-[50px] leading-[1.05] text-brand-black">
+            <span className="block font-heading text-[44px] md:text-[56px] leading-[1.05] text-brand-black">
               Your local partner for
             </span>
-            <span className="block font-heading text-[40px] md:text-[50px] leading-[1.05] text-brand-mid italic">
+            <span className="block font-heading text-[44px] md:text-[56px] leading-[1.05] text-brand-mid italic">
               office technology
             </span>
           </h1>
@@ -70,12 +70,12 @@ export function HomeHero() {
         </div>
 
         {/* ── Right column — single collage image ─────────────── */}
-        <div className="relative min-h-[500px] lg:min-h-[640px]">
+        <div className="relative min-h-[500px] lg:min-h-[680px]">
           <Image
             src="/images/hero-collage.png"
             alt="5,000 plus machines supported - Milk Man Toner Company team and history"
             fill
-            className="object-contain object-center"
+            className="object-cover object-left"
             sizes="(max-width: 1024px) 100vw, 50vw"
             priority
           />
