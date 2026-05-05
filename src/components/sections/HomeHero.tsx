@@ -4,7 +4,7 @@ import Link from "next/link";
 export function HomeHero() {
   return (
     <div className="bg-[#f0f1f3] border-b-2 border-brand-black overflow-hidden">
-      <div className="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-[50%_50%] min-h-[640px]">
+      <div className="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-[56%_44%] min-h-[640px]">
 
         {/* Left column */}
         <div className="py-14 md:py-20 flex flex-col justify-center">
@@ -15,8 +15,8 @@ export function HomeHero() {
           </div>
           <div className="w-12 h-[2px] bg-brand-mid mb-6" />
           <h1 className="mb-5">
-            <span className="block font-heading text-[44px] md:text-[58px] leading-[1.05] text-brand-black">Your local partner for</span>
-            <span className="block font-heading text-[44px] md:text-[58px] leading-[1.05] text-brand-mid italic">office technology</span>
+            <span className="block font-heading text-[38px] md:text-[50px] leading-[1.05] text-brand-black">Your local partner for</span>
+            <span className="block font-heading text-[38px] md:text-[50px] leading-[1.05] text-brand-mid italic">office technology</span>
           </h1>
           <p className="text-[14px] md:text-[15px] text-brand-mid leading-[1.75] mb-8 max-w-[440px]">
             HP and Konica Minolta copiers, printers, toner delivery, and managed print services - serving Sacramento, the Bay Area, Silicon Valley, and Reno.
@@ -56,14 +56,14 @@ export function HomeHero() {
         {/* Right column — overflow-visible so polaroids bleed off edge */}
         <div className="relative min-h-[640px] overflow-visible">
 
-          {/* 5,000+ stat — large, shifted left so it reads as a page centerpiece */}
-          <div className="absolute left-[-80px] top-1/2 -translate-y-1/2 w-[540px] h-[540px] pointer-events-none select-none">
+          {/* 5,000+ stat — centered in right column, sized to fit with polaroids */}
+          <div className="absolute left-[-20px] top-1/2 -translate-y-1/2 w-[460px] h-[460px] pointer-events-none select-none">
             <Image
               src="/images/stat-5000.png"
               alt="5,000 plus machines supported since 2013"
               fill
               className="object-contain"
-              sizes="540px"
+              sizes="460px"
               priority
             />
           </div>
@@ -82,8 +82,8 @@ export function HomeHero() {
             </div>
           </div>
 
-          {/* Logo card — right side, below midpoint so it clears the "+" */}
-          <div className="absolute top-[52%] right-[-16px] w-[130px] md:w-[148px] bg-white border border-steel-pale p-2.5 rotate-[-2deg] z-20">
+          {/* Logo card — right edge, vertically centered */}
+          <div className="absolute top-[36%] right-[-16px] w-[130px] md:w-[148px] bg-white border border-steel-pale p-2.5 rotate-[-2deg] z-20">
             <div className="w-4 h-4 rounded-full bg-brand-mid absolute top-[-7px] left-1/2 -translate-x-1/2" />
             <div className="relative h-[126px] w-full">
               <Image
