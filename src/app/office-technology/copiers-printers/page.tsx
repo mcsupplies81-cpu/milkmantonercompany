@@ -34,6 +34,7 @@ const categories = [
     models: "bizhub C250i · C300i · C360i · C450i · C550i · C650i · C4050i · C3320i",
     image: "/images/machines/category-color-mfp.jpg",
     imageAlt: "Konica Minolta bizhub color multifunction copier",
+    imagePadding: "p-14",
   },
   {
     pill: "Konica Minolta",
@@ -53,6 +54,7 @@ const categories = [
     models: "bizhub 4020i · bizhub 5020i",
     image: "/images/machines/category-bw-mfp.jpg",
     imageAlt: "Konica Minolta bizhub black and white multifunction copier",
+    imagePadding: "p-14",
   },
   {
     pill: "HP",
@@ -72,6 +74,7 @@ const categories = [
     models: "LaserJet Pro MFP · LaserJet Enterprise MFP",
     image: "/images/machines/category-hp-laserjet.jpg",
     imageAlt: "HP LaserJet multifunction printer for office use",
+    imagePadding: "p-14",
   },
   {
     pill: "HP",
@@ -91,6 +94,7 @@ const categories = [
     models: "HP PageWide Pro series",
     image: "/images/machines/category-hp-pagewide.jpg",
     imageAlt: "HP PageWide high-speed office printer",
+    imagePadding: "p-6",
   },
 ];
 
@@ -218,7 +222,7 @@ export default function CopiersAndPrintersPage() {
                   src={cat.image}
                   alt={cat.imageAlt}
                   fill
-                  className="object-contain p-6"
+                  className={`object-contain ${cat.imagePadding}`}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
