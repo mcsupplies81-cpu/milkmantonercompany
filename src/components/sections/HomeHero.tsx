@@ -7,7 +7,7 @@ export function HomeHero() {
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[680px]">
 
         {/* ── Left column ─────────────────────────────────────── */}
-        <div className="flex flex-col justify-center px-8 md:px-10 lg:px-12 py-16">
+        <div className="flex flex-col justify-center px-5 md:px-10 lg:px-12 py-10 lg:py-16">
 
           <div className="flex items-center gap-2 mb-4">
             <span className="text-[10px] font-semibold tracking-[0.16em] text-brand-mid uppercase">
@@ -70,12 +70,12 @@ export function HomeHero() {
         </div>
 
         {/* ── Right column — single collage image ─────────────── */}
-        <div className="relative min-h-[500px] lg:min-h-[680px]">
+        <div className="relative h-[320px] lg:min-h-[680px]">
           <Image
             src="/images/hero-collage.png"
             alt="5,000 plus machines supported - Milk Man Toner Company team and history"
             fill
-            className="object-contain object-right"
+            className="object-contain object-center lg:object-right"
             sizes="(max-width: 1024px) 100vw, 50vw"
             priority
           />
