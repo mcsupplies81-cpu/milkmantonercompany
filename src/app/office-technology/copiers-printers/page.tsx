@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CTAStrip } from "@/components/sections/CTAStrip";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildBreadcrumbSchema, buildProductSchema } from "@/lib/schema";
@@ -24,14 +25,15 @@ const categories = [
       "The Konica Minolta bizhub i-Series is built for offices that need professional color output, fast scanning, and enterprise-level security in a single device. From the compact C250i for small offices to the high-volume C650i for large workgroups  -  every bizhub comes with intuitive touchscreen controls, mobile printing, and cloud-ready workflows.",
     features: [
       "Print, copy, scan & fax in one device",
-      "25–65 ppm color output",
+      "25-65 ppm color output",
       "Scan to cloud, email & USB",
       "Mobile & Wi-Fi printing built in",
       "Enterprise-grade security",
       "Intuitive 10\" touchscreen panel",
     ],
     models: "bizhub C250i · C300i · C360i · C450i · C550i · C650i · C4050i · C3320i",
-    image: "konica-color",
+    image: "/images/machines/category-color-mfp.jpg",
+    imageAlt: "Konica Minolta bizhub color multifunction copier",
   },
   {
     pill: "Konica Minolta",
@@ -49,7 +51,8 @@ const categories = [
       "Fast first-print time",
     ],
     models: "bizhub 4020i · bizhub 5020i",
-    image: "konica-bw",
+    image: "/images/machines/category-bw-mfp.jpg",
+    imageAlt: "Konica Minolta bizhub black and white multifunction copier",
   },
   {
     pill: "HP",
@@ -67,7 +70,8 @@ const categories = [
       "Fleet management ready",
     ],
     models: "LaserJet Pro MFP · LaserJet Enterprise MFP",
-    image: "hp-laserjet",
+    image: "/images/machines/category-hp-laserjet.jpg",
+    imageAlt: "HP LaserJet multifunction printer for office use",
   },
   {
     pill: "HP",
@@ -85,7 +89,8 @@ const categories = [
       "Professional color quality",
     ],
     models: "HP PageWide Pro series",
-    image: "hp-pagewide",
+    image: "/images/machines/category-hp-pagewide.jpg",
+    imageAlt: "HP PageWide high-speed office printer",
   },
 ];
 
@@ -208,10 +213,14 @@ export default function CopiersAndPrintersPage() {
               </div>
 
               {/* Image side */}
-              <div className="bg-steel h-[260px] md:h-[340px] border-[1.5px] border-brand-black flex items-center justify-center">
-                <p className="text-[11px] text-white/60 text-center px-4">
-                  [ {cat.title} photo ]
-                </p>
+              <div className="relative h-[260px] md:h-[340px] border-[1.5px] border-brand-black overflow-hidden">
+                <Image
+                  src={cat.image}
+                  alt={cat.imageAlt}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
