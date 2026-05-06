@@ -213,12 +213,12 @@ export default function CopiersAndPrintersPage() {
               </div>
 
               {/* Image side */}
-              <div className="relative h-[260px] md:h-[340px] border-[1.5px] border-brand-black overflow-hidden">
+              <div className="relative h-[260px] md:h-[340px] border-[1.5px] border-brand-black overflow-hidden bg-white">
                 <Image
                   src={cat.image}
                   alt={cat.imageAlt}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain p-6"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
