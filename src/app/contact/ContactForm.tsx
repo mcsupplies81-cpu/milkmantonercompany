@@ -37,6 +37,14 @@ export function ContactForm() {
     setError("");
 
     const form = e.currentTarget;
+    // Honeypot check - bots fill this, humans never see it
+    const honeypot = (form.elements.namedItem("website") as HTMLInputElement).value;
+    if (honeypot) {
+      setSubmitted(true);
+      setLoading(false);
+      return;
+    }
+
     const data = {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       company: (form.elements.namedItem("company") as HTMLInputElement).value,
@@ -72,6 +80,10 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Honeypot - hidden from real users, bots fill it in */}
+      <div style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }} aria-hidden="true">
+        <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label className="block text-[11px] font-medium text-brand-black mb-1">

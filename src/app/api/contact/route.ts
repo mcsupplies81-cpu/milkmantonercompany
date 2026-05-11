@@ -6,8 +6,13 @@ export const dynamic = "force-dynamic";
 export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
-    const { name, company, phone, email, service, message } =
+    const { name, company, phone, email, service, message, website } =
       await request.json();
+
+    // Honeypot - bots fill this field, humans never see it
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
 
     if (!name || !phone || !email) {
       return NextResponse.json(
