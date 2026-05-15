@@ -44,7 +44,7 @@ export default function BlogPost() {
 
           <div className="prose-milkman">
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              Konica Minolta has built a strong following in Sacramento&apos;s medical, legal, and professional services sectors. Here&apos;s why local businesses choose the bizhub line - and what to know before buying or leasing one through a local dealer.
+              <Link href="/office-technology/copiers-printers">Konica Minolta</Link> has built a strong following in <Link href="/copier-dealer/sacramento">Sacramento</Link>&apos;s medical, legal, and professional services sectors. Here&apos;s why local businesses choose the bizhub line - and what to know before buying or leasing one through a local dealer.
             </p>
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">Konica Minolta&apos;s Position in the Sacramento Market</h2>

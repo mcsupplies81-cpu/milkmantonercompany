@@ -44,7 +44,7 @@ export default function BlogPost() {
 
           <div className="prose-milkman">
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              Choosing the right copier for a small business in Placer County doesn&apos;t have to be complicated. The key is matching the machine to your actual needs - and avoiding paying for features you&apos;ll never use.
+              Choosing the right copier for a small business in <Link href="/copier-dealer/sacramento">Placer County</Link> doesn&apos;t have to be complicated. The key is matching the machine to your actual needs - and avoiding paying for features you&apos;ll never use.
             </p>
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">Start With Your Print Volume</h2>
@@ -52,7 +52,7 @@ export default function BlogPost() {
               The single most important variable in choosing a copier for a small business is monthly print volume. How many pages does your office actually print per month? Not how many you think, and not the maximum you might ever print - the realistic average.
             </p>
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              For most small businesses in Roseville, Rocklin, and Lincoln, that number falls between 500 and 3,000 pages per month. A medical practice with heavy paperwork might run 5,000 to 8,000 pages. A two-person consulting firm might run 300. The number matters because every copier is rated for a maximum monthly duty cycle, and running a machine beyond its rating shortens its life dramatically.
+              For most small businesses in <Link href="/copier-dealer/sacramento">Roseville</Link>, Rocklin, and Lincoln, that number falls between 500 and 3,000 pages per month. A medical practice with heavy paperwork might run 5,000 to 8,000 pages. A two-person consulting firm might run 300. The number matters because every copier is rated for a maximum monthly duty cycle, and running a machine beyond its rating shortens its life dramatically.
             </p>
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">Color vs. Black and White</h2>

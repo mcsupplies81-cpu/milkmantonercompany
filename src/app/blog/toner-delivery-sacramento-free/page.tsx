@@ -44,12 +44,12 @@ export default function BlogPost() {
 
           <div className="prose-milkman">
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              Buying toner at Staples or Office Depot is one of the most common ways Sacramento businesses quietly overspend on printing. The retail markup is significant, the wrong-cartridge problem is constant, and there&apos;s a better option available that costs less and delivers to your door.
+              Buying toner at Staples or Office Depot is one of the most common ways <Link href="/copier-dealer/sacramento">Sacramento</Link> businesses quietly overspend on printing. The retail markup is significant, the wrong-cartridge problem is constant, and there&apos;s a better option available that costs less and delivers to your door.
             </p>
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">The Real Cost of Buying Toner at Staples</h2>
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              Walk into any Staples or Office Depot in Sacramento and you&apos;ll pay retail price for toner - and retail price on printer cartridges is marked up significantly over what dealers pay. A standard HP 87A black toner cartridge that retails for around $110 at a big-box store is available through a local dealer like Milk Man Toner Company at a meaningfully lower price, with free delivery to your door.
+              Walk into any Staples or Office Depot in Sacramento and you&apos;ll pay retail price for toner - and retail price on printer cartridges is marked up significantly over what dealers pay. A standard HP 87A black toner cartridge that retails for around $110 at a big-box store is available through a local dealer like Milk Man Toner Company at a meaningfully lower price, with <Link href="/services/toner-delivery">free toner delivery</Link> to your door.
             </p>
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
               Multiply that difference across all the toner your office uses in a year, and you&apos;re looking at real savings. A busy Sacramento office that goes through 20 or 30 cartridges annually could easily save several hundred dollars just by switching to local dealer pricing.

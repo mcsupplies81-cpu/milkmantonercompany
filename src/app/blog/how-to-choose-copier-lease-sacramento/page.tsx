@@ -44,7 +44,7 @@ export default function BlogPost() {
 
           <div className="prose-milkman">
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              Choosing the right copier lease can save your Sacramento business thousands of dollars over the life of the agreement  -  or cost you thousands if you get it wrong. With so many options on the market, how do you find the right fit? Here&apos;s what every Sacramento business owner should consider before signing a copier lease.
+              Choosing the right <Link href="/services/copier-lease">copier lease</Link> can save your Sacramento business thousands of dollars over the life of the agreement  -  or cost you thousands if you get it wrong. With so many options on the market, how do you find the right fit? Here&apos;s what every Sacramento business owner should consider before signing a copier lease.
             </p>
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">1. Understand your print volume</h2>
@@ -64,7 +64,7 @@ export default function BlogPost() {
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">4. Choose a local dealer</h2>
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              National copier companies may offer competitive pricing upfront, but when your copier breaks down at 4 PM on a Friday, who&apos;s coming to fix it? A local Sacramento dealer like Milk Man Toner Company has technicians in the area who can respond the same day. We know the Sacramento market, we know your business, and we&apos;re just a phone call away.
+              National copier companies may offer competitive pricing upfront, but when your copier breaks down at 4 PM on a Friday, who&apos;s coming to fix it? A local <Link href="/copier-dealer/sacramento">copier dealer in Sacramento</Link> like Milk Man Toner Company has technicians in the area who can respond the same day. We know the Sacramento market, we know your business, and we&apos;re just a phone call away.
             </p>
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">5. Ask about flexibility</h2>

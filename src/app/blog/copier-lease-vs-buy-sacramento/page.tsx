@@ -78,10 +78,10 @@ export default function BlogPost() {
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">Maintenance: Included in a Lease, Extra When You Own</h2>
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              A well-structured copier lease includes a service and maintenance agreement. When something breaks, your dealer comes out and fixes it at no additional cost. Parts, labor, and often toner are bundled into your monthly payment.
+              A well-structured <Link href="/services/copier-lease">copier lease</Link> includes a service and maintenance agreement. When something breaks, your dealer comes out and fixes it at no additional cost. Parts, labor, and often toner are bundled into your monthly payment.
             </p>
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              When you own a copier, service calls cost money. A typical service call from a local dealer in the Sacramento area runs $150 to $250 for labor, plus parts. For a machine that&apos;s three or four years old, service calls start to add up. This is one of the most commonly overlooked costs in the lease-vs.-buy calculation.
+              When you own a copier, service calls cost money. A typical service call from a <Link href="/copier-dealer/sacramento">local copier dealer</Link> in the Sacramento area runs $150 to $250 for labor, plus parts. For a machine that&apos;s three or four years old, service calls start to add up. This is one of the most commonly overlooked costs in the lease-vs.-buy calculation.
             </p>
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">When Buying Makes More Sense</h2>

@@ -44,7 +44,7 @@ export default function BlogPost() {
 
           <div className="prose-milkman">
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              Most Sacramento businesses spend more on printing than they realize - and far more than they need to. Managed print services (MPS) is a proven approach to getting those costs under control while eliminating the daily printer headaches that pull your team away from actual work.
+              Most <Link href="/copier-dealer/sacramento">Sacramento</Link> businesses spend more on printing than they realize - and far more than they need to. <Link href="/services/managed-print">Managed print services</Link> (MPS) is a proven approach to getting those costs under control while eliminating the daily printer headaches that pull your team away from actual work.
             </p>
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">What Is Managed Print Services?</h2>

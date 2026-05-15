@@ -6,19 +6,12 @@ import { CTAStrip } from "@/components/sections/CTAStrip";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { company } from "@/data/company";
 
-const _baseMeta = buildMetadata({
-  title: "Copier Dealer Reno NV | Milk Man Toner Company",
+export const metadata: Metadata = buildMetadata({
+  title: "Copier Dealer Reno NV",
   description:
     "HP and Konica Minolta copier dealer serving Reno, Sparks, Carson City, and Northern Nevada. Same-day service, free toner delivery. Call (916) 253-9804.",
   path: "/copier-dealer/reno",
 });
-
-export const metadata: Metadata = {
-  ..._baseMeta,
-  title: {
-    absolute: "Copier Dealer Reno NV | Milk Man Toner Company",
-  },
-};
 
 const schema = {
   "@context": "https://schema.org",

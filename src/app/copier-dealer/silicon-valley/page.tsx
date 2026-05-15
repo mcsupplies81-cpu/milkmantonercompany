@@ -6,20 +6,12 @@ import { CTAStrip } from "@/components/sections/CTAStrip";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { company } from "@/data/company";
 
-const _baseMeta = buildMetadata({
-  title: "Copier Dealer Silicon Valley & San Jose | Milk Man Toner Company",
+export const metadata: Metadata = buildMetadata({
+  title: "Copier Dealer Silicon Valley & San Jose",
   description:
     "HP and Konica Minolta copier dealer serving Silicon Valley, San Jose, Palo Alto, and Santa Clara. Same-day service, free toner delivery. Call (916) 253-9804.",
   path: "/copier-dealer/silicon-valley",
 });
-
-export const metadata: Metadata = {
-  ..._baseMeta,
-  title: {
-    absolute:
-      "Copier Dealer Silicon Valley & San Jose | Milk Man Toner Company",
-  },
-};
 
 const schema = {
   "@context": "https://schema.org",

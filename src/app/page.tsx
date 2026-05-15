@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      "Copier Dealer Sacramento & Northern California | Milk Man Toner Company",
+  },
+  description:
+    "HP and Konica Minolta copier dealer serving Sacramento, Bay Area, Silicon Valley, Reno, and Northern California. Free toner delivery and same-day service. Call (916) 253-9804.",
+};
 import { SolutionCards } from "@/components/sections/SolutionCards";
 import { TechPartner } from "@/components/sections/TechPartner";
 import { TrustBadgeBar } from "@/components/sections/TrustBadgeBar";

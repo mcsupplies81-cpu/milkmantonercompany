@@ -6,19 +6,12 @@ import { CTAStrip } from "@/components/sections/CTAStrip";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { company } from "@/data/company";
 
-const _baseMeta = buildMetadata({
-  title: "Copier Dealer Sacramento | Milk Man Toner Company",
+export const metadata: Metadata = buildMetadata({
+  title: "Copier Dealer Sacramento",
   description:
     "Sacramento's local copier dealer since 2012. HP and Konica Minolta sales, leasing, and rental with free toner delivery and same-day service. Call (916) 253-9804.",
   path: "/copier-dealer/sacramento",
 });
-
-export const metadata: Metadata = {
-  ..._baseMeta,
-  title: {
-    absolute: "Copier Dealer Sacramento | Milk Man Toner Company",
-  },
-};
 
 const schema = {
   "@context": "https://schema.org",

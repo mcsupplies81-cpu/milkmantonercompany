@@ -6,21 +6,12 @@ import { CTAStrip } from "@/components/sections/CTAStrip";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { company } from "@/data/company";
 
-const _baseMeta = buildMetadata({
-  title:
-    "Copier Dealer Northern California | Chico, Redding & I-5 Corridor | Milk Man Toner Company",
+export const metadata: Metadata = buildMetadata({
+  title: "Copier Dealer Northern California | Chico, Redding & I-5 Corridor",
   description:
     "HP and Konica Minolta copier dealer serving Chico, Redding, Red Bluff, Yuba City, and the I-5 corridor. Same-day service, free toner delivery. Call (916) 253-9804.",
   path: "/copier-dealer/northern-california",
 });
-
-export const metadata: Metadata = {
-  ..._baseMeta,
-  title: {
-    absolute:
-      "Copier Dealer Northern California | Chico, Redding & I-5 Corridor | Milk Man Toner Company",
-  },
-};
 
 const schema = {
   "@context": "https://schema.org",

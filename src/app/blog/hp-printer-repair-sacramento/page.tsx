@@ -44,7 +44,7 @@ export default function BlogPost() {
 
           <div className="prose-milkman">
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              HP LaserJet printers are among the most popular office printers in the world for good reason. They&apos;re fast, produce crisp output, and hold up well under daily use. But even the best printers break down, and when they do, Sacramento businesses need a local technician who can get there fast.
+              HP LaserJet printers are among the most popular office printers in the world for good reason. They&apos;re fast, produce crisp output, and hold up well under daily use. But even the best printers break down, and when they do, <Link href="/copier-dealer/sacramento">Sacramento</Link> businesses need a local technician who can get there fast.
             </p>
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">Problem 1: Paper Jams</h2>
@@ -94,7 +94,7 @@ export default function BlogPost() {
 
             <h2 className="font-heading text-lg text-brand-black mt-8 mb-3">Same-Day Service in Sacramento and Placer County</h2>
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
-              Milk Man Toner Company provides same-day HP printer service throughout Sacramento County and Placer County, including Roseville, Rocklin, Lincoln, Loomis, Auburn, and Penryn. We carry common HP LaserJet parts on our service vehicles, which means most repairs are completed on the first visit.
+              Milk Man Toner Company provides same-day <Link href="/services/printer-repair">HP printer repair</Link> throughout Sacramento County and Placer County, including Roseville, Rocklin, Lincoln, Loomis, Auburn, and Penryn. We carry common HP LaserJet parts on our service vehicles, which means most repairs are completed on the first visit.
             </p>
             <p className="text-[13px] text-[#444] leading-[1.8] mb-5">
               Call us at {company.phone} to schedule service. If your printer is down, tell us and we&apos;ll prioritize getting a technician to you as quickly as possible.
