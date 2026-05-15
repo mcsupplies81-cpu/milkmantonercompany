@@ -181,7 +181,7 @@ export function ContactForm() {
       </button>
 
       <p className="text-[10px] text-[#999] text-center">
-        We&apos;ll respond within one business day. No spam, no pressure.
+        We will get back to you asap!
       </p>
     </form>
   );

@@ -60,6 +60,7 @@ export default function ContactPage() {
                 Request a quote
               </h2>
               <ContactForm />
+
             </div>
 
             {/* Contact info */}
@@ -120,13 +121,20 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="mt-4 bg-steel-bg border-[1.5px] border-brand-black h-[200px] flex items-center justify-center">
-                <p className="text-[10px] text-brand-mid opacity-60 text-center">
-                  [ Google Maps embed  -  3444 Swetzer Rd Suite D, Loomis CA 95650
-                  ]
-                </p>
+              {/* Map */}
+              <div className="mt-4 border-[1.5px] border-brand-black overflow-hidden">
+                <iframe
+                  title="Milk Man Toner Company location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3117.0!2d-121.1966!3d38.8274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b3b1b1b1b1b1b%3A0x0!2s3444+Swetzer+Rd+Suite+D%2C+Loomis%2C+CA+95650!5e0!3m2!1sen!2sus!4v1"
+                  width="100%"
+                  height="200"
+                  style={{ border: 0, display: "block" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
+
             </div>
           </div>
         </div>
