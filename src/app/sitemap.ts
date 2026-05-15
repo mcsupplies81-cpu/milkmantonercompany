@@ -26,6 +26,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "choosing-local-copier-dealer-vs-national",
   ];
 
+  const copierDealerPages = [
+    "sacramento",
+    "san-francisco",
+    "silicon-valley",
+    "east-bay",
+    "reno",
+    "lake-tahoe",
+    "northern-california",
+  ];
+
   const serviceCityPages = [
     "managed-print-sacramento",
     "managed-print-roseville",
@@ -75,6 +85,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+
+    // Copier dealer location pages (high priority - buyer intent)
+    ...copierDealerPages.map((slug) => ({
+      url: `${BASE_URL}/copier-dealer/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
     })),
 
     // Company

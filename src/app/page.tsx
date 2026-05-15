@@ -17,10 +17,61 @@ import { blogPosts } from "@/data/blog-posts";
 import { HomeHero } from "@/components/sections/HomeHero";
 import { company } from "@/data/company";
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Milk Man Toner Company",
+  description:
+    "HP Authorized Dealer and Konica Minolta Certified copier and printer dealer serving Sacramento, San Francisco Bay Area, Silicon Valley, Reno, Lake Tahoe, and Northern California with sales, leasing, toner delivery, and same-day service.",
+  url: "https://milkmancompany.com",
+  telephone: "+19162539804",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3444 Swetzer Rd Suite D",
+    addressLocality: "Loomis",
+    addressRegion: "CA",
+    postalCode: "95650",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 38.8274,
+    longitude: -121.1966,
+  },
+  areaServed: [
+    "Sacramento", "San Francisco", "Oakland", "San Jose",
+    "Palo Alto", "Reno", "Sparks", "Carson City",
+    "Lake Tahoe", "Truckee", "Chico", "Redding",
+    "Yuba City", "Roseville", "Rocklin", "Folsom",
+  ],
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:00",
+    closes: "17:00",
+  },
+  brand: [
+    { "@type": "Brand", name: "HP" },
+    { "@type": "Brand", name: "Konica Minolta" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Copier and Printer Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Copier Leasing Northern California" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Copier Sales Northern California" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Managed Print Services" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Free Toner Delivery" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Printer Repair Northern California" } },
+    ],
+  },
+};
+
 export default function HomePage() {
   return (
     <>
       <JsonLd data={buildFAQPageSchema(homepageFaqs)} />
+      <JsonLd data={localBusinessSchema} />
 
       <HomeHero />
 

@@ -36,7 +36,19 @@ export const mainNav: NavSection[] = [
       { label: "Business Continuity", href: "/it-solutions/business-continuity", description: "Backup & disaster recovery" },
     ],
   },
-  { label: "Locations", href: "/locations/sacramento" },
+  {
+    label: "Locations",
+    href: "/copier-dealer/sacramento",
+    children: [
+      { label: "Sacramento", href: "/copier-dealer/sacramento", description: "Capital region & greater Sacramento" },
+      { label: "San Francisco / Marin", href: "/copier-dealer/san-francisco", description: "SF, Marin & North Bay" },
+      { label: "Silicon Valley", href: "/copier-dealer/silicon-valley", description: "San Jose, Palo Alto & tech corridor" },
+      { label: "East Bay", href: "/copier-dealer/east-bay", description: "Oakland, Berkeley & Contra Costa" },
+      { label: "Reno / Northern Nevada", href: "/copier-dealer/reno", description: "Reno, Sparks & Carson City" },
+      { label: "Lake Tahoe / Truckee", href: "/copier-dealer/lake-tahoe", description: "Tahoe Basin & Sierra corridor" },
+      { label: "Northern California", href: "/copier-dealer/northern-california", description: "Chico, Redding & I-5 corridor" },
+    ],
+  },
   { label: "About", href: "/about" },
 ];
 

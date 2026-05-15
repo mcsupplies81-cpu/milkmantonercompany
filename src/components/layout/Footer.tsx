@@ -30,6 +30,18 @@ const footerCols = [
     ],
   },
   {
+    title: "Locations",
+    links: [
+      { label: "Sacramento", href: "/copier-dealer/sacramento" },
+      { label: "San Francisco / Marin", href: "/copier-dealer/san-francisco" },
+      { label: "Silicon Valley", href: "/copier-dealer/silicon-valley" },
+      { label: "East Bay", href: "/copier-dealer/east-bay" },
+      { label: "Reno / Northern Nevada", href: "/copier-dealer/reno" },
+      { label: "Lake Tahoe / Truckee", href: "/copier-dealer/lake-tahoe" },
+      { label: "Northern California", href: "/copier-dealer/northern-california" },
+    ],
+  },
+  {
     title: "Company",
     links: [
       { label: "Locations", href: "/locations/sacramento" },
@@ -54,7 +66,7 @@ export function Footer() {
           />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-5">
           {footerCols.map((col) => (
             <div key={col.title}>
               <h4 className="text-[9px] tracking-[0.12em] text-steel uppercase mb-2">
